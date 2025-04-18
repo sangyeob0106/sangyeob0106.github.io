@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예매하기 - 엽씨네마</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                <div class="logo-text">엽씨<span>네마</span></div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="timetable.html" class="nav-link">상영시간표</a></li>
+                    <li class="nav-item"><a href="reserve.html" class="nav-link active">예매</a></li>
+                    <li class="nav-item"><a href="mypage.html" class="nav-link">마이페이지</a></li>
+                    <li class="nav-item"><button class="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">영화 예매</h1>
+            
+            <!-- 예매 단계 -->
+            <div class="booking-steps">
+                <div class="booking-step active">1. 영화/시간</div>
+                <div class="booking-step">2. 좌석 선택</div>
+                <div class="booking-step">3. 옵션 선택</div>
+                <div class="booking-step">4. 결제</div>
+            </div>
+            
+            <!-- 예매 선택 영역 -->
+            <div class="booking-selection">
+                <div class="booking-left">
+                    <!-- 영화 선택 -->
+                    <div class="form-group">
+                        <label class="form-label">영화 선택</label>
+                        <select class="form-control">
+                            <option>영화를 선택하세요</option>
+                            <option selected>듄: 파트 2</option>
+                            <option>인사이드 아웃 2</option>
+                            <option>글래디에이터 2</option>
+                            <option>기생충</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 지점 선택 -->
+                    <div class="form-group">
+                        <label class="form-label">지점 선택</label>
+                        <select class="form-control">
+                            <option>지점을 선택하세요</option>
+                            <option selected>엽씨네마 강남점</option>
+                            <option>엽씨네마 홍대점</option>
+                            <option>엽씨네마 명동점</option>
+                            <option>엽씨네마 부산점</option>
+                            <option>엽씨네마 대구점</option>
+                        </select>
+                    </div>
+                    
+                    <!-- 날짜 선택 -->
+                    <div class="form-group">
+                        <label class="form-label">날짜 선택</label>
+                        <div class="date-selection" style="margin-bottom: 0;">
+                            <div class="date-btn active" data-date="2025-04-17">
+                                <div>오늘</div>
+                                <div>4/17</div>
+                            </div>
+                            <div class="date-btn" data-date="2025-04-18">
+                                <div>금</div>
+                                <div>4/18</div>
+                            </div>
+                            <div class="date-btn" data-date="2025-04-19">
+                                <div>토</div>
+                                <div>4/19</div>
+                            </div>
+                            <div class="date-btn" data-date="2025-04-20">
+                                <div>일</div>
+                                <div>4/20</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 시간 선택 -->
+                    <div class="form-group">
+                        <label class="form-label">시간 선택</label>
+                        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                            <div class="time-slot active">10:30 (1관)</div>
+                            <div class="time-slot">13:30 (1관)</div>
+                            <div class="time-slot">16:30 (1관)</div>
+                            <div class="time-slot">11:00 (IMAX관)</div>
+                            <div class="time-slot">14:00 (IMAX관)</div>
+                            <div class="time-slot">17:00 (IMAX관)</div>
+                            <div class="time-slot sold-out">12:30 (5관)</div>
+                            <div class="time-slot">15:30 (5관)</div>
+                            <div class="time-slot">18:30 (5관)</div>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>듄: 파트 2 - 엽씨네마</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                <div class="logo-text">엽씨<span>네마</span></div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="timetable.html" class="nav-link">상영시간표</a></li>
+                    <li class="nav-item"><a href="reserve.html" class="nav-link">예매</a></li>
+                    <li class="nav-item"><a href="mypage.html" class="nav-link">마이페이지</a></li>
+                    <li class="nav-item"><button class="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- 영화 상세 정보 -->
+            <section class="movie-detail">
+                <div class="movie-poster">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="듄: 파트 2">
+                </div>
+                <div class="movie-info">
+                    <h1 class="movie-title">듄: 파트 2</h1>
+                    <div class="movie-meta">
+                        <div class="movie-meta-item">
+                            <i class="fas fa-calendar"></i>
+                            <span>개봉일: 2024.02.28</span>
+                        </div>
+                        <div class="movie-meta-item">
+                            <i class="fas fa-clock"></i>
+                            <span>상영시간: 166분</span>
+                        </div>
+                        <div class="movie-meta-item">
+                            <i class="fas fa-film"></i>
+                            <span>장르: SF, 모험, 드라마</span>
+                        </div>
+                        <div class="movie-meta-item">
+                            <i class="fas fa-user"></i>
+                            <span>관람등급: 12세 관람가</span>
+                        </div>
+                    </div>
+                    <div class="rating" style="margin-bottom: 1rem;">
+                        <i class="fas fa-star"></i>
+                        <span>9.1/10 (관람객 평점)</span>
+                    </div>
+                    <p class="movie-description">
+                        아트레이데스 가문의 후계자 폴(티모시 샬라메)은 자신의 운명을 마주합니다. 
+                        프레멘들과 함께 하킴을 되찾기 위해 전쟁을 시작하고, 
+                        사막의 힘과 지식을 습득하며 선택받은 자로서의 여정을 계속합니다. 
+                        한편 황제와 하코넨 남작은 아트레이데스 가문을 완전히 몰살하려는 계획을 세웁니다. 
+                        폴은 자신의 예지 능력으로 인류의 미래를 보고, 그 운명을 바꾸기 위한 선택을 해야 합니다.
+                    </p>
+                    <div class="movie-staff">
+                        <h3 class="movie-staff-title">감독</h3>
+                        <div class="movie-staff-list">
+                            <div class="staff-item">드니 빌뇌브</div>
+                        </div>
+                    </div>
+                    <div class="movie-staff">
+                        <h3 class="movie-staff-title">출연</h3>
+                        <div class="movie-staff-list">
+                            <div class="staff-item">티모시 샬라메</div>
+                            <div class="staff-item">젠데이아</div>
+                            <div class="staff-item">레베카 퍼거슨</div>
+                            <div class="staff-item">하비에르 바르뎀</div>
+                            <div class="staff-item">조쉬 브롤린</div>
+                            <div class="staff-item">플로렌스 퓨</div>
+                            <div class="staff-item">오스틴 버틀러</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 2rem;">
+                        <a href="reserve.html" class="btn btn-primary btn-lg">예매하기</a>
+                        <button class="btn btn-outline btn-lg" style="margin-left: 1rem;">
+                            <i class="fas fa-heart"></i> 찜하기
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 예고편 영역 -->
+            <section class="movie-trailer">
+                <h2 class="section-title">예고편</h2>
+                <div class="trailer-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e0zBWMVxZXU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- 리뷰 영역 -->
+            <section class="reviews">
+                <h2 class="section-title">관람객 리뷰</h2>
+                <div class="review-form">
+                    <h3>리뷰 작성</h3>
+                    <form>
+                        <div class="form-group">
+                            <label class="form-label">평점</label>
+                            <div class="star-rating">
+                                <button type="button" class="star-btn"><i class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn"><i class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn"><i class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn"><i class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn"><i class="fas fa-star"></i></button>
+                                <input type="hidden" id="rating-input" value="0">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="review-text" class="form-label">내용</label>
+                            <textarea id="review-text" class="form-control" rows="4" placeholder="영화에 대한 솔직한 평가를 남겨주세요."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">리뷰 등록</button>
+                    </form>
+                </div>
+
+                <div class="review-list">
+                    <!-- 리뷰 아이템 1 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">영화광123</div>
+                            <div class="review-date">2025-04-10</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>5.0</span>
+                        </div>
+                        <p>장엄한 스케일과 비주얼이 압도적입니다. 1편보다 더 깊이 있는 스토리와 캐릭터 발전이 인상적이었어요. 특히 티모시 샬라메의 연기가 빛납니다. 사운드와 영상미의 조화가 완벽한 영화입니다.</p>
+                    </div>
+                    
+                    <!-- 리뷰 아이템 2 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">무비팬</div>
+                            <div class="review-date">2025-04-08</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>4.0</span>
+                        </div>
+                        <p>SF 영화의 새로운 기준을 제시했습니다. 웅장한 영상미와 음악이 정말 좋았어요. 다만 스토리가 조금 느리게 진행되는 느낌이라 약간의 지루함이 있었습니다. 그래도 꼭 봐야하는 명작입니다!</p>
+                    </div>
+                    
+                    <!-- 리뷰 아이템 3 -->
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="reviewer-name">스페이스트래블러</div>
+                            <div class="review-date">2025-04-05</div>
+                        </div>
+                        <div class="review-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.5</span>
+                        </div>
+                        <p>원작 소설의 방대한 내용을 이렇게 잘 풀어낼 수 있다니 대단합니다. 드니 빌뇌브 감독의 연출력이 빛나는 작품이에요. 사막 행성 아라키스의 웅장함이 IMAX 스크린을 통해 완벽하게 구현됐습니다. 꼭 큰 스크린으

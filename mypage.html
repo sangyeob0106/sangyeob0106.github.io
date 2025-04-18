@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지 - 엽씨네마</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                <div class="logo-text">엽씨<span>네마</span></div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="timetable.html" class="nav-link">상영시간표</a></li>
+                    <li class="nav-item"><a href="reserve.html" class="nav-link">예매</a></li>
+                    <li class="nav-item"><a href="mypage.html" class="nav-link active">마이페이지</a></li>
+                    <li class="nav-item"><button class="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">마이페이지</h1>
+            
+            <!-- 탭 메뉴 -->
+            <div class="my-page-menu">
+                <div class="my-page-tab active" data-tab="my-bookings">예매 내역</div>
+                <div class="my-page-tab" data-tab="my-favorites">찜한 영화</div>
+                <div class="my-page-tab" data-tab="my-reviews">내 리뷰</div>
+                <div class="my-page-tab" data-tab="my-points">포인트/쿠폰</div>
+            </div>
+            
+            <!-- 예매 내역 -->
+            <div class="my-page-content" id="my-bookings">
+                <h2 style="margin-bottom: 1.5rem;">나의 예매 내역</h2>
+                
+                <!-- 예매 항목 1 -->
+                <div class="my-bookings-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="듄: 파트 2" class="booking-movie-poster">
+                    <div class="booking-info">
+                        <h3 class="booking-title">듄: 파트 2</h3>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 엽씨네마 강남점</span>
+                            <span><i class="fas fa-calendar"></i> 2025.04.20</span>
+                            <span><i class="fas fa-clock"></i> 14:00</span>
+                            <span><i class="fas fa-users"></i> 성인 2명</span>
+                        </div>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-ticket-alt"></i> 예매번호: YC202504200001</span>
+                            <span class="booking-status status-upcoming">관람 예정</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <button class="btn btn-outline btn-sm">예매 취소</button>
+                            <button class="btn btn-primary btn-sm">예매권 보기</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 예매 항목 2 -->
+                <div class="my-bookings-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDM5OTExMGEtZjMxZi00NGEzLWJkOTMtNDMwZDQ0OTk5ZWY0XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg" alt="인사이드 아웃 2" class="booking-movie-poster">
+                    <div class="booking-info">
+                        <h3 class="booking-title">인사이드 아웃 2</h3>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 엽씨네마 홍대점</span>
+                            <span><i class="fas fa-calendar"></i> 2025.04.10</span>
+                            <span><i class="fas fa-clock"></i> 17:30</span>
+                            <span><i class="fas fa-users"></i> 성인 1명, 청소년 1명</span>
+                        </div>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-ticket-alt"></i> 예매번호: YC202504100012</span>
+                            <span class="booking-status status-completed">관람 완료</span>
+                        </div>
+                        <div style="margin-top: 1rem;">
+                            <button class="btn btn-primary btn-sm">리뷰 작성</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 예매 항목 3 -->
+                <div class="my-bookings-item">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDhkOGZkNmMtYjc3Zi00MjBlLWJiMWMtNDQxYmFkZjQxYWJjXkEyXkFqcGdeQXVyNzkzODk2Mzc@._V1_.jpg" alt="기생충" class="booking-movie-poster">
+                    <div class="booking-info">
+                        <h3 class="booking-title">기생충</h3>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> 엽씨네마 강남점</span>
+                            <span><i class="fas fa-calendar"></i> 2025.04.01</span>
+                            <span><i class="fas fa-clock"></i> 19:00</span>
+                            <span><i class="fas fa-users"></i> 성인 2명</span>
+                        </div>
+                        <div class="booking-meta">
+                            <span><i class="fas fa-ticket-alt"></i> 예매번호: YC202504010005</span>
+                            <span class="booking-status status-cancelled">취소됨</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 찜한 영화 -->
+            <div class="my-page-content" id="my-favorites" style="display: none;">
+                <h2 style="margin-bottom: 1.5rem;">내가 찜한 영화</h2>
+                
+                <div class="grid">
+                    <!-- 찜한 영화 1 -->
+                    <div class="movie-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="듄: 파트 2" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">듄: 파트 2</h3>
+                            <p class="movie-card-info">SF, 모험 | 12세 관람가 | 166분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>9.1/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 찜한 영화 2 -->
+                    <div class="movie-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg" alt="글래디에이터 2" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">글래디에이터 2</h3>
+                            <p class="movie-card-info">액션, 드라마 | 15세 관람가 | 158분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.5/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>

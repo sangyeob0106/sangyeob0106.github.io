@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>엽씨네마 - 톡톡 튀는 영화관</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="엽씨네마 로고">
+                <div class="logo-text">엽씨<span>네마</span></div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active">홈</a></li>
+                    <li class="nav-item"><a href="timetable.html" class="nav-link">상영시간표</a></li>
+                    <li class="nav-item"><a href="reserve.html" class="nav-link">예매</a></li>
+                    <li class="nav-item"><a href="mypage.html" class="nav-link">마이페이지</a></li>
+                    <li class="nav-item"><button class="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 배너 영역 -->
+        <section class="banner">
+          <video autoplay muted loop playsinline width="100%" height="100%" class="responsive-video">
+              <source src="https://adimg.cgv.co.kr/images/202503/BTM/BTM_1080x608_PC.mp4" type="video/mp4">
+              이 브라우저는 Video 태그를 지원하지 않습니다. (Your browser does not support the video tag.)
+          </video>
+          <div class="banner-content container">
+              <h2 class="banner-title">엽씨네마에서 특별한 영화 경험을 만나보세요</h2>
+              <p class="banner-text">최신 영화와 다양한 이벤트로 여러분의 영화 감상을 더욱 특별하게 만들어 드립니다.</p>
+              <a href="reserve.html" class="btn btn-primary btn-lg">지금 예매하기</a>
+          </div>
+      </section>
+
+        <!-- 현재 상영작 -->
+        <section class="section section-light">
+            <div class="container">
+                <h2 class="section-title">현재 상영작</h2>
+                <div class="grid">
+                    <!-- 영화 카드 1 -->
+                    <div class="movie-card">
+                        <img src="https://i.namu.wiki/i/uwdmdZitrdM1Rl8eBIkg759Oy3v3APdd1MY4yAO0JQrBbKi7h-L9EQxIhCBeZuSEGKNfkYFSqxcV4Gxtbh2En9YDQL6z6QKxbRBICOew9rd33TZfsjju-2xjWsOU_JVLDA4BZsHbXKg7atvKtyAtWQ.webp" alt="듄: 파트 2" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">듄: 파트 2</h3>
+                            <p class="movie-card-info">SF, 모험 | 12세 관람가 | 166분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>9.1/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 영화 카드 2 -->
+                    <div class="movie-card">
+                        <img src="https://i.namu.wiki/i/_2rXSKS4AcZ0YQUuJwPfnJC40Pl8c96Mb2esJnv5USdbtcbu9kCPqo1DxhCo8hA55U4WiuZNaxm0XTe0H5RnSg.webp" alt="인사이드 아웃 2" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">인사이드 아웃 2</h3>
+                            <p class="movie-card-info">애니메이션, 코미디 | 전체 관람가 | 96분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.7/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 영화 카드 3 -->
+                    <div class="movie-card">
+                        <img src="https://i.namu.wiki/i/eZRPUjDimZNC1fRr4zN2eVKSIHZPrUAM2Pn223oZbBSDRVjRaDpCxNxsq-0juH6pTkiST1EGbz9Y8qhnLV8WMoDgAp9sh2bGu2U1ZtQBULxP2HUMaQ5FaDgB_FIQOL8RNgibC9DWxois34pOTCwc1Q.webp" alt="글래디에이터 2" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">글래디에이터 2</h3>
+                            <p class="movie-card-info">액션, 드라마 | 15세 관람가 | 158분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.5/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 영화 카드 4 -->
+                    <div class="movie-card">
+                        <img src=" https://cdn.safetimes.co.kr/news/photo/201905/75448_50041_3016.jpg" alt="기생충" class="movie-card-img">
+                        <div class="movie-card-content">
+                            <h3 class="movie-card-title">기생충</h3>
+                            <p class="movie-card-info">스릴러, 드라마 | 15세 관람가 | 132분</p>
+                            <div class="movie-card-footer">
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>8.9/10</span>
+                                </div>
+                                <a href="movie.html" class="btn btn-primary btn-sm">상세보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center" style="margin-top: 2rem;">
+                    <a href="timetable.html" class="btn btn-outline">더 많은 영화 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 할인 정보 섹션 -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">할인 정보</h2>
+                <div class="grid">
+                    <!-- 할인 카드 1 -->
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fas fa-calendar-day"></i></div>
+                        <h3 class="promo-title">문화의 날 할인</h3>
+                        <p class="promo-text">매월 마지막 수요일, 모든 영화 티켓 5,000원!</p>
+                    </div>
+                    
+                    <!-- 할인 카드 2 -->
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3 class="promo-title">학생 할인</h3>
+                        <p class="promo-text">학생증 지참 시 일반 영화 2,000원 할인!</p>
+                    </div>
+                    
+                    <!-- 할인 카드 3 -->
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <h3 class="promo-title">생일 이벤트</h3>
+                        <p class="promo-text">생일 당일 본인 티켓 무료!</p>
+                    </div>
+                    
+                    <!-- 할인 카드 4 -->
+                    <div class="promo-card">
+                        <div class="promo-icon"><i class="fas fa-users"></i></div>
+                        <h3 class="promo-title">커플 패키지</h3>
+                        <p class="promo-text">2인 티켓 + 팝콘 + 음료 세트 할인!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 이벤트 배너 -->
+        <section class="section section-light">
+            <div class="container">
+                <h2 class="section-title">진행 중인 이벤트</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                    <div style="flex: 1; min-width: 300px;">
+                        <a href="#" style="display: block; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                            <div style="width:100%; aspect-ratio:16/9; overflow:hidden;">
+                                <img src="https://images.khan.co.kr/article/2025/04/15/news-p.v1.20250415.f0835b4163cb48568c80db9c7636b67b_P1.jpg" alt="이벤트 1" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 20px; color: white;">
+                                <h3>메가 마니아 클럼</h3>
+                                <p>2025.04.01 ~ 2025.05.31</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="flex: 1; min-width: 300px;">
+                        <a href="#" style="display: block; border-radius: var(--border-radius); overflow: hidden; position: relative;">
+                            <div style="width:100%; aspect-ratio:16/9; overflow:hidden;">
+                                <img src="https://img.cgv.co.kr/WebApp/contents/eventV4/43976/17423590934830.jpg" alt="이벤트 2" style="width:100%; height:100%; object-fit:cover;">
+                            </div>
+                            <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, rgba(0,0,0,0.7)); padding: 20px; color: white;">
+                                <h3>홈런 시리즈</h3>
+                                <p>2025.05.01 ~ 2025.05.05</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+
+        <!-- 영화 추천 기능 -->
+        <section class="section section-dark">
+            <div class="container">
+                <h2 class="section-title">나에게 맞는 영화 찾기</h2>
+                <div class="movie-recommendation">
+                    <h3>오늘의 기분이나 날씨에 따라 영화를 추천해 드려요!</h3>
+                    <div style="margin-top: 1.5rem;">
+                        <div class="mood-selector">
+                            <button class="mood-btn active" data-mood="happy">기쁨 😊</button>
+                            <button class="mood-btn" data-mood="sad">우울 😢</button>
+                            <button class="mood-btn" data-mood="romantic">로맨틱 💕</button>
+                            <button class="mood-btn" data-mood="exciting">신나는 🤩</button>
+                            <button class="mood-btn" data-mood="mysterious">미스터리 🕵️</button>
+                        </div>
+                        
+                        <div class="weather-selector">
+                            <label for="weather-select">오늘의 날씨:</label>
+                            <select id="weather-select" class="form-control">
+                                <option value="sunny">맑음</option>
+                                <option value="rainy">비</option>
+                                <option value="cloudy">흐림</option>
+                                <option value="snowy">눈</option>
+                            </select>
+                        </div>
+                        
+                        <button id="recommend-btn" class="btn btn-primary">영화 추천받기</button>
+                    </div>
+                    
+                    <div class="recommended-movies">
+                        <!-- 추천 결과가 여기에 표시됩니다 -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                    <div class="footer-logo-text">엽씨<span>네마</span></div>
+                </div>
+                <p class="footer-text">
+                    엽씨네마는 고객에게 최고의 영화 경험을 제공합니다.<br>
+                    다양한 영화와 특별한 이벤트로 여러분의 일상에 즐거움을 더합니다.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>빠른 메뉴</h4>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="timetable.html">상영시간표</a></li>
+                    <li><a href="reserve.html">예매</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>소셜 미디어</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 엽씨네마. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- 챗봇 UI -->
+    <div class="chatbot">
+        <div class="chatbot-btn">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <img src="https://api.iconify.design/emojione:robot-face.svg" alt="챗봇">
+                    여비
+                </div>
+                <button class="chatbot-close">&times;</button>
+            </div>
+            <div class="chatbot-body">
+                <div class="chat-message bot-message">
+                    <div class="message-content">안녕하세요! 엽씨네마 챗봇 여비입니다. 무엇을 도와드릴까요?</div>
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <form class="chat-input-form">
+                    <input type="text" class="chat-input" placeholder="메시지를 입력하세요...">
+                    <button type="submit" class="chat-submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

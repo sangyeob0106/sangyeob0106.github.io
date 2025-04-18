@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상영시간표 - 엽씨네마</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 영역 -->
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                <div class="logo-text">엽씨<span>네마</span></div>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">홈</a></li>
+                    <li class="nav-item"><a href="timetable.html" class="nav-link active">상영시간표</a></li>
+                    <li class="nav-item"><a href="reserve.html" class="nav-link">예매</a></li>
+                    <li class="nav-item"><a href="mypage.html" class="nav-link">마이페이지</a></li>
+                    <li class="nav-item"><button class="dark-mode-toggle"><i class="fas fa-moon"></i></button></li>
+                </ul>
+                <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1 class="section-title">상영시간표</h1>
+            
+            <!-- 지점 선택 -->
+            <section class="location-select">
+                <h2>지점 선택</h2>
+                <div class="form-group">
+                    <select class="form-control">
+                        <option selected>지점을 선택하세요</option>
+                        <option>엽씨네마 강남점</option>
+                        <option>엽씨네마 홍대점</option>
+                        <option>엽씨네마 명동점</option>
+                        <option>엽씨네마 부산점</option>
+                        <option>엽씨네마 대구점</option>
+                    </select>
+                </div>
+            </section>
+            
+            <!-- 날짜 선택 -->
+            <section class="date-selection">
+                <div class="date-btn active" data-date="2025-04-17">
+                    <div>오늘</div>
+                    <div>4/17</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-18">
+                    <div>금</div>
+                    <div>4/18</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-19">
+                    <div>토</div>
+                    <div>4/19</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-20">
+                    <div>일</div>
+                    <div>4/20</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-21">
+                    <div>월</div>
+                    <div>4/21</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-22">
+                    <div>화</div>
+                    <div>4/22</div>
+                </div>
+                <div class="date-btn" data-date="2025-04-23">
+                    <div>수</div>
+                    <div>4/23</div>
+                </div>
+            </section>
+            
+            <!-- 영화별 시간표 -->
+            <section class="movie-schedule">
+                <!-- 영화 1 -->
+                <div class="movie-schedule-header">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDgxOTdjMzYtZGQxMS00ZTAzLWI4Y2UtMTQzN2VlYjYyZWRiXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg" alt="듄: 파트 2" class="schedule-movie-poster">
+                    <div class="schedule-movie-info">
+                        <h3>듄: 파트 2</h3>
+                        <p>166분 | 12세 관람가</p>
+                    </div>
+                </div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>상영관</th>
+                            <th>상영시간</th>
+                            <th>잔여석</th>
+                            <th>예매</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1관</td>
+                            <td>
+                                <div class="schedule-time">10:30</div>
+                                <div class="schedule-seats">잔여: 120/150</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">13:30</div>
+                                <div class="schedule-seats">잔여: 98/150</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">16:30</div>
+                                <div class="schedule-seats">잔여: 140/150</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IMAX관</td>
+                            <td>
+                                <div class="schedule-time">11:00</div>
+                                <div class="schedule-seats">잔여: 70/200</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">14:00</div>
+                                <div class="schedule-seats">잔여: 55/200</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">17:00</div>
+                                <div class="schedule-seats">잔여: 130/200</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5관</td>
+                            <td>
+                                <div class="schedule-time">12:30</div>
+                                <div class="schedule-seats">잔여: 100/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">15:30</div>
+                                <div class="schedule-seats">잔여: 85/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">18:30</div>
+                                <div class="schedule-seats">잔여: 110/120</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="reserve.html" class="btn btn-primary schedule-btn">예매하기</a>
+                </div>
+            </section>
+            
+            <!-- 영화 2 -->
+            <section class="movie-schedule">
+                <div class="movie-schedule-header">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDM5OTExMGEtZjMxZi00NGEzLWJkOTMtNDMwZDQ0OTk5ZWY0XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_FMjpg_UX1000_.jpg" alt="인사이드 아웃 2" class="schedule-movie-poster">
+                    <div class="schedule-movie-info">
+                        <h3>인사이드 아웃 2</h3>
+                        <p>96분 | 전체 관람가</p>
+                    </div>
+                </div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>상영관</th>
+                            <th>상영시간</th>
+                            <th>잔여석</th>
+                            <th>예매</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2관</td>
+                            <td>
+                                <div class="schedule-time">10:00</div>
+                                <div class="schedule-seats">잔여: 110/130</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">12:00</div>
+                                <div class="schedule-seats">잔여: 40/130</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">14:00</div>
+                                <div class="schedule-seats">잔여: 85/130</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3관</td>
+                            <td>
+                                <div class="schedule-time">11:30</div>
+                                <div class="schedule-seats">잔여: 90/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">13:30</div>
+                                <div class="schedule-seats">잔여: 30/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">15:30</div>
+                                <div class="schedule-seats">잔여: 75/120</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4관</td>
+                            <td>
+                                <div class="schedule-time">10:30</div>
+                                <div class="schedule-seats">잔여: 100/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">12:30</div>
+                                <div class="schedule-seats">잔여: 60/120</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">14:30</div>
+                                <div class="schedule-seats">잔여: 95/120</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="reserve.html" class="btn btn-primary schedule-btn">예매하기</a>
+                </div>
+            </section>
+            
+            <!-- 영화 3 -->
+            <section class="movie-schedule">
+                <div class="movie-schedule-header">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMDBmYTZjNjUtN2M1MS00MTQ2LTk2ODgtNzc2M2QyZGE5NTVjXkEyXkFqcGdeQXVyNzAwMjU2MTY@._V1_.jpg" alt="글래디에이터 2" class="schedule-movie-poster">
+                    <div class="schedule-movie-info">
+                        <h3>글래디에이터 2</h3>
+                        <p>158분 | 15세 관람가</p>
+                    </div>
+                </div>
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>상영관</th>
+                            <th>상영시간</th>
+                            <th>잔여석</th>
+                            <th>예매</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2관</td>
+                            <td>
+                                <div class="schedule-time">16:00</div>
+                                <div class="schedule-seats">잔여: 120/130</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">19:00</div>
+                                <div class="schedule-seats">잔여: 90/130</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">22:00</div>
+                                <div class="schedule-seats">잔여: 110/130</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>IMAX관</td>
+                            <td>
+                                <div class="schedule-time">20:00</div>
+                                <div class="schedule-seats">잔여: 150/200</div>
+                            </td>
+                            <td>
+                                <div class="schedule-time">23:00</div>
+                                <div class="schedule-seats">잔여: 175/200</div>
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <a href="reserve.html" class="btn btn-primary schedule-btn">예매하기</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- 푸터 영역 -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-info">
+                <div class="footer-logo">
+                    <img src="https://api.iconify.design/fluent-emoji-flat:popcorn.svg" alt="엽씨네마 로고">
+                    <div class="footer-logo-text">엽씨<span>네마</span></div>
+                </div>
+                <p class="footer-text">
+                    엽씨네마는 고객에게 최고의 영화 경험을 제공합니다.<br>
+                    다양한 영화와 특별한 이벤트로 여러분의 일상에 즐거움을 더합니다.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>빠른 메뉴</h4>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="timetable.html">상영시간표</a></li>
+                    <li><a href="reserve.html">예매</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h4>소셜 미디어</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            &copy; 2025 엽씨네마. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- 챗봇 UI -->
+    <div class="chatbot">
+        <div class="chatbot-btn">
+            <i class="fas fa-comment"></i>
+        </div>
+        <div class="chatbot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <img src="https://api.iconify.design/emojione:robot-face.svg" alt="챗봇">
+                    여비
+                </div>
+                <button class="chatbot-close">&times;</button>
+            </div>
+            <div class="chatbot-body">
+                <div class="chat-message bot-message">
+                    <div class="message-content">안녕하세요! 엽씨네마 챗봇 여비입니다. 무엇을 도와드릴까요?</div>
+                </div>
+            </div>
+            <div class="chatbot-footer">
+                <form class="chat-input-form">
+                    <input type="text" class="chat-input" placeholder="메시지를 입력하세요...">
+                    <button type="submit" class="chat-submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1577 @@
+/* 글꼴 임포트 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Poppins:wght@400;500;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+/* CSS 변수 설정 - 라이트모드 */
+:root {
+  /* YEOP CINEMA 색상 설정 */
+  --primary-color: #FF4B4B; /* 더 밝고 생동감 있는 빨간색 */
+  --secondary-color: #FF6B6B; /* 부드러운 빨간색 */
+  --accent-color: #FFD93D; /* 밝은 노란색 */
+  --bg-color: #F8F9FA; /* 매우 밝은 회색 */
+  --bg-secondary: #FFFFFF; /* 순수 흰색 */
+  --text-color: #2C3E50; /* 진한 청회색 */
+  --text-light: #6C757D; /* 중간 회색 */
+  --border-color: #E9ECEF; /* 매우 밝은 회색 */
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  --header-bg: rgba(255, 255, 255, 0.95);
+  --footer-bg: #2C3E50;
+  --footer-text: #FFFFFF;
+  
+  /* 크기 설정 */
+  --header-height: 80px;
+  --footer-height: 250px;
+  --border-radius: 16px;
+  
+  /* 트랜지션 */
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 다크모드 변수 */
+[data-theme="dark"] {
+  --primary-color: #FF6B6B;
+  --secondary-color: #FF8E8E;
+  --accent-color: #FFD93D;
+  --bg-color: #1A1A1A;
+  --bg-secondary: #2D2D2D;
+  --text-color: #FFFFFF;
+  --text-light: #B0B0B0;
+  --border-color: #404040;
+  --card-bg: #2D2D2D;
+  --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  --header-bg: rgba(26, 26, 26, 0.95);
+  --footer-bg: #1A1A1A;
+  --footer-text: #FFFFFF;
+}
+
+/* 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Noto Sans KR', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  transition: var(--transition);
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 버튼 스타일 */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: var(--border-radius);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background-color: #FFD54F;
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.btn-accent:hover {
+  background-color: #FFD54F;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn-sm {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* 컨테이너 */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 900; /* 훨씬 더 두껍게 */
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-transform: uppercase; /* 로고처럼 대문자로 */
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-center .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 헤더 영역 - 로고 스타일에 맞게 업데이트 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--header-bg);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  height: var(--header-height);
+  transition: var(--transition);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(248, 218, 163);
+  align-items: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px; /* 로고 크기 증가 */
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: 900; /* 훨씬 더 두껍게 */
+  color: var(--primary-color);
+  text-transform: uppercase; /* 로고처럼 대문자로 */
+  letter-spacing: 1px; /* 자간 추가 */
+}
+
+.logo-text span {
+  color: var(--secondary-color);
+}
+
+/* 내비게이션 */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 1.5rem;
+}
+
+.nav-link {
+  position: relative;
+  padding: 0.5rem 0;
+  font-weight: 700; /* 더 두껍게 */
+  transition: var(--transition);
+  text-transform: uppercase; /* 대문자로 변경 */
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* 더 두껍게 */
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* 모바일 메뉴 토글 버튼 */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* 다크모드 토글 버튼 */
+.dark-mode-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-left: 1rem;
+  transition: var(--transition);
+}
+
+.dark-mode-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* 메인 콘텐츠 영역 */
+main {
+  flex: 1;
+}
+
+/* 영화 카드 스타일 */
+.movie-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: var(--transition);
+  position: relative;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.movie-card-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.movie-card:hover .movie-card-img {
+  transform: scale(1.05);
+}
+
+.movie-card-content {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800; /* 더 두껍게 */
+  text-transform: uppercase; /* 대문자로 변경 */
+}
+
+.movie-card-info {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+}
+
+.movie-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.rating {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+/* 그리드 레이아웃 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* 섹션 공통 스타일 */
+.section {
+  padding: 4rem 0; /* 패딩 증가 */
+}
+
+.section-light {
+  background-color: var(--bg-color);
+}
+
+.section-dark {
+  background-color: var(--bg-secondary);
+}
+
+/* 배너 영역 */
+.banner {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  margin-bottom: 4rem;
+}
+
+.banner-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: var(--border-radius);
+}
+
+.banner-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* 할인 및 이벤트 섹션 */
+.promo-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  transition: var(--transition);
+  height: 100%;
+  border: 2px solid transparent; /* 투명 테두리 추가 */
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent-color); /* 호버 시 테두리 색상 변경 */
+}
+
+.promo-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.promo-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.promo-text {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* 영화 상세 페이지 */
+.movie-detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.movie-poster {
+  flex: 0 0 300px;
+}
+
+.movie-poster img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  border: 2px solid var(--accent-color); /* 테두리 추가 */
+}
+
+.movie-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.movie-title {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.movie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.movie-meta-item {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+}
+
+.movie-meta-item i {
+  margin-right: 0.5rem;
+}
+
+.movie-description {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.movie-staff {
+  margin-bottom: 1.5rem;
+}
+
+.movie-staff-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.movie-staff-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.staff-item {
+  background-color: var(--bg-secondary);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+}
+
+.movie-trailer {
+  margin-bottom: 3rem;
+}
+
+.trailer-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--accent-color); /* 테두리 추가 */
+}
+
+.trailer-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* 리뷰 섹션 */
+.review-form {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent-color); /* 테두리 추가 */
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color); /* 테두리 두껍게 */
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.rating-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #ddd;
+  transition: var(--transition);
+}
+
+.star-btn.active {
+  color: var(--accent-color);
+}
+
+.review-list {
+  margin-top: 2rem;
+}
+
+.review-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--accent-color); /* 왼쪽 테두리 추가 */
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.reviewer-name {
+  font-weight: 800;
+}
+
+.review-date {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.review-rating {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+/* 시간표 페이지 */
+.location-select {
+  margin-bottom: 2rem;
+}
+
+.date-selection {
+  display: flex;
+  overflow-x: auto;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.date-btn {
+  min-width: 80px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color); /* 테두리 두껍게 */
+  border-radius: var(--border-radius);
+  background-color: var(--bg-color);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+.date-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.movie-schedule {
+  margin-bottom: 3rem;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.movie-schedule:hover {
+  border-color: var(--accent-color);
+}
+
+.movie-schedule-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.schedule-movie-poster {
+  width: 100px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--accent-color);
+}
+
+.schedule-movie-info h3 {
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.schedule-table th, 
+.schedule-table td {
+  padding: 1rem;
+  text-align: center;
+  border: 2px solid var(--border-color);
+}
+
+.schedule-table th {
+  background-color: var(--bg-secondary);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+.schedule-time {
+  font-weight: 800;
+}
+
+.schedule-seats {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+.schedule-btn {
+  margin-top: 0.5rem;
+}
+
+/* 예매 페이지 */
+.booking-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  padding: 0.5rem;
+}
+
+.booking-step {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.booking-step.active {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.booking-step:not(:last-child)::after {
+  content: '→';
+  display: inline-block;
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 900;
+}
+
+.booking-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.booking-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.booking-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.seats-container {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent-color);
+}
+
+.screen {
+  width: 80%;
+  height: 40px;
+  background-color: var(--primary-color);
+  margin: 0 auto 2rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.seats-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.seat {
+  aspect-ratio: 1;
+  background-color: var(--bg-secondary);
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+.seat.selected {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.seat.unavailable {
+  background-color: var(--text-light);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.seat-types {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.seat-type {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.seat-type-indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+}
+
+.seat-type-available .seat-type-indicator {
+  background-color: var(--bg-secondary);
+}
+
+.seat-type-selected .seat-type-indicator {
+  background-color: var(--primary-color);
+}
+
+.seat-type-unavailable .seat-type-indicator {
+  background-color: var(--text-light);
+  opacity: 0.5;
+}
+
+.booking-summary {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent-color);
+}
+
+.summary-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border-color);
+  text-transform: uppercase;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.summary-label {
+  font-weight: 700;
+}
+
+.summary-value {
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.summary-total {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border-color);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.snacks-selection {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent-color);
+}
+
+.snack-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.snack-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.snack-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-right: 1rem;
+  border: 2px solid var(--accent-color);
+}
+
+.snack-info {
+  flex: 1;
+}
+
+.snack-name {
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.snack-price {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.snack-quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--bg-secondary);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 700;
+}
+
+.quantity-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.quantity-input {
+  width: 40px;
+  text-align: center;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 0.25rem;
+  font-weight: 700;
+}
+
+/* 마이페이지 */
+.my-page-menu {
+  display: flex;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.my-page-tab {
+  padding: 1rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9rem;
+}
+
+.my-page-tab.active {
+  color: var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
+}
+
+.my-page-content {
+  margin-bottom: 3rem;
+}
+
+.my-bookings-item,
+.my-favorites-item,
+.my-reviews-item,
+.my-coupons-item {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border: 2px solid transparent;
+  transition: var(--transition);
+}
+
+.my-bookings-item:hover,
+.my-favorites-item:hover,
+.my-reviews-item:hover,
+.my-coupons-item:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+.booking-movie-poster,
+.favorite-movie-poster,
+.review-movie-poster {
+  width: 100px;
+  border-radius: var(--border-radius);
+  object-fit: cover;
+  border: 2px solid var(--accent-color);
+}
+
+.booking-info,
+.favorite-info,
+.review-info,
+.coupon-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.booking-title,
+.favorite-title,
+.review-title,
+.coupon-title {
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.booking-meta,
+.favorite-meta,
+.review-meta,
+.coupon-meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.booking-meta span,
+.favorite-meta span,
+.review-meta span,
+.coupon-meta span {
+  margin-right: 1rem;
+}
+
+.booking-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-completed {
+  background-color: #e6f7ee;
+  color: #00a854;
+}
+
+.status-upcoming {
+  background-color: #e6f3ff;
+  color: #2196f3;
+}
+
+.status-cancelled {
+  background-color: #fff1f0;
+  color: #f5222d;
+}
+
+.coupon-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.coupon-expiry {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+.points-card {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 2px solid var(--accent-color);
+}
+
+.points-value {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.points-label {
+  font-size: 1rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+/* 푸터 영역 - 로고 스타일에 맞게 업데이트 */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 3rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo img {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-logo-text span {
+  color: white;
+}
+
+.footer-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-text {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: var(--transition);
+  font-weight: 600;
+}
+
+.footer-links a:hover {
+  color: var(--accent-color);
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-social h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-color);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* 챗봇 UI - 로고 스타일에 맞게 업데이트 */
+.chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.chatbot-btn:hover {
+  transform: scale(1.1);
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.chatbot-container {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  width: 350px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  display: none;
+  border: 2px solid var(--accent-color);
+}
+
+.chatbot-header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chatbot-title {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.chatbot-title img {
+  width: 30px;
+  height: 30px;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color);
+}
+
+.chatbot-close {
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.chatbot-body {
+  height: 300px;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.chat-message {
+  margin-bottom: 1rem;
+  display: flex;
+}
+
+.message-content {
+  max-width: 80%;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+}
+
+.bot-message {
+  align-items: flex-start;
+}
+
+.bot-message .message-content {
+  background-color: var(--bg-secondary);
+  border-bottom-left-radius: 0;
+}
+
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .message-content {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border-bottom-right-radius: 0;
+}
+
+.chatbot-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.chat-input-form {
+  display: flex;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.chat-submit {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  border: none;
+  padding: 0 1rem;
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* 영화 추천 UI */
+.movie-recommendation {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--accent-color);
+}
+
+.mood-selector {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.mood-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: var(--transition);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.mood-btn.active {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+.weather-selector {
+  margin-bottom: 1.5rem;
+}
+
+.recommended-movies {
+  margin-top: 1.5rem;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--accent-color);
+  }
+  
+  .nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+  
+  .menu-toggle {
+    display: block;
+  }
+  
+  .banner {
+    height: 400px;
+  }
+  
+  .banner-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .movie-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .movie-poster {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .banner {
+    height: 300px;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+  
+  .booking-steps {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .booking-step:not(:last-child)::after {
+    content: '↓';
+    display: block;
+    position: static;
+    transform: none;
+    margin: 0.5rem 0;
+  }
+  
+  .seats-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  .chatbot-container {
+    width: 300px;
+  }
+}
